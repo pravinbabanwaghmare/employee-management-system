@@ -1,0 +1,461 @@
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f9;
+  color: #111827;
+}
+
+/* ================= LOGIN PAGE ================= */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0e7ff, #f4f6f9);
+}
+
+.login-card {
+  width: 360px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #4f46e5;
+}
+
+.login-field {
+  margin-bottom: 16px;
+}
+
+.login-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #4338ca;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* ================= SUMMARY CARDS ================= */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card {
+  padding: 22px;
+  border-radius: 16px;
+  color: white;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.blue { background: #3b82f6; }
+.green { background: #22c55e; }
+.red { background: #ef4444; }
+
+.add-btn {
+  background: #22c55e;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+/* ================= SEARCH BAR ================= */
+.search-bar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 14px;
+  align-items: center;
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.search-field {
+  width: 100%;
+}
+
+.search-field input,
+.search-field select {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-field input:focus,
+.search-field select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79,70,229,0.2);
+}
+
+
+/* ================= TABLE ================= */
+.table-wrapper {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.emp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.emp-table th {
+  background: #4f46e5;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+.emp-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+.emp-table td:last-child {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.emp-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.profile-img,
+.no-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.no-img {
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.inactive {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.btn.edit {
+  background: #38bdf8;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn.delete {
+  background: #ef4444;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* ================= ADD / EDIT FORM ================= */
+.form-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f6f9;
+}
+
+.form-card {
+  width: 420px;
+  background: white;
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.form-card h2 {
+  text-align: center;
+  color: #4f46e5;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.form-group.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.btn.primary {
+  flex: 1;
+  background: #4f46e5;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+}
+
+.btn.outline {
+  flex: 1;
+  background: white;
+  color: #4f46e5;
+  border: 2px solid #c7d2fe;
+  border-radius: 12px;
+}
+
+.print {
+  margin-top: 16px;
+  background: #f59e0b;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+}
+
+.preview-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+/* ===== THIN SCROLLBAR (GLOBAL) ===== */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;              /* 👈 scrollbar width */
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* clean look */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;  /* light gray */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;              /* thin scrollbar */
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+/* ===== Active Checkbox UI Fix ===== */
+.active-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.active-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.active-row label {
+  font-size: 14px;
+  cursor: pointer;
+}
+/* ===== ACTIVE CHECKBOX FIX ===== */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+/* ================= PRINT ================= */
+@media print {
+
+  .logout-btn,
+  .add-btn,
+  .search-bar,
+  .print,
+  .btn {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  .card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    color: black;
+  }
+
+  .table-wrapper {
+    box-shadow: none;
+  }
+
+  .emp-table th:last-child,
+  .emp-table td:last-child {
+    display: none;
+  }
+}
+/* ===== ACTIVE CHECKBOX PERFECT FIX ===== */
+.active-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.active-checkbox input {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.active-checkbox label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ===== TABLE STABLE ===== */
+.emp-table td:last-child {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
